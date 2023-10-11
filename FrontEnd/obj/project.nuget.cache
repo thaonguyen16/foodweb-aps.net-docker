@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aLph4LbqozTKJUx0slv0/4pGg75Q26S/CAiIFDNaY3MJ3WQgButTv1UN90UdVOGaDvxRHR1MJWTvhglM8cLhsQ==",
+  "success": true,
+  "projectFilePath": "D:\\.NET CORE\\FoodWebApp\\FrontEnd\\FrontEnd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\THU THAO\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
+    "C:\\Users\\THU THAO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

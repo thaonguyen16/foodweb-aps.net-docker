@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  frontend:
+    image: ${DOCKER_REGISTRY-}frontend
+    build:
+      context: .
+      dockerfile: FrontEnd/Dockerfile
+
+  bannerapi:
+    image: ${DOCKER_REGISTRY-}bannerapi
+    build:
+      context: .
+      dockerfile: BannerAPI/Dockerfile
+
+
+  foodapi:
+    image: ${DOCKER_REGISTRY-}foodapi
+    build:
+      context: .
+      dockerfile: FoodAPI/Dockerfile
+
+  redis:
+   image: redis
+

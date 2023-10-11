@@ -1,0 +1,79 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<div class="slideshow-container">
+
+    @foreach (var banner in Model.banners)
+    {
+        <div class="mySlides fade" style="width:92%;height:500px">
+            <img src=@banner.Image style="width:100%;height:500px">
+        </div>
+    }
+
+</div>
+<br>
+
+<div style="text-align:center">
+    @foreach (var banner in Model.banners)
+    {
+        <span class="dot"></span>
+        
+    }
+</div>
+
+<div class="menu">
+    <div class="menu-text">
+        <img src="~/menu.png" width="50" height="50">
+        <p>Menu</p>
+    </div>
+
+    <div class="line">
+
+    </div>
+</div>
+
+<div class="main-food">
+
+    <div class="main-div">
+
+        @foreach (var food in Model.foods)
+        {
+            <div class="food-card">
+                <img src=@food.Image style="width: 100%;height:200px">
+                <p style="font-size:20px;font-weight:500">@food.Name</p>
+                <p style="font-size:20px;font-weight:500">@food.Price</p>
+                <div style="height:50px"></div>
+            </div>
+        }
+
+    </div>
+
+</div>
+
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+    }
+</script>
